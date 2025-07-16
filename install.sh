@@ -5,6 +5,7 @@ echo "[*] Installing prerequisites (iproute2, net-tools, grep, awk, jq, curl)...
 sudo apt update -y >/dev/null 2>&1
 sudo apt install -y iproute2 net-tools grep awk sudo iputils-ping jq curl haproxy >/dev/null 2>&1
 sudo apt-get install -y jq
+sudo apt install -y haproxy
 # ---------------- COLORS ----------------
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'

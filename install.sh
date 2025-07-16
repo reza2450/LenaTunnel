@@ -23,14 +23,14 @@ Lena_menu() {
     SERVER_COUNTRY=$(curl -sS "http://ip-api.com/json/$SERVER_IP" | jq -r '.country')
     SERVER_ISP=$(curl -sS "http://ip-api.com/json/$SERVER_IP" | jq -r '.isp')
 
-    echo "+-------------------------------------------+"
+    echo "+-----------------------------------------------------------------------------+"
     echo "| _                      										|"
     echo "|| |                     										|"
     echo "|| |     ___ _ __   __ _ 										|"
     echo "|| |    / _ \ '_ \ / _  |										|"
     echo "|| |___|  __/ | | | (_| |										|"
-    echo "|\_____/\___|_| |_|\__,_|	V1.0.0 Beta				|" 
-    echo "+-------------------------------------------+"    
+    echo "|\_____/\___|_| |_|\__,_|	V1.0.0 Beta				            |" 
+    echo "+-----------------------------------------------------------------------------+"    
     echo -e "| Telegram Channel : ${MAGENTA}@AminiDev ${NC}| Version : ${GREEN} 1.0.0 Beta ${NC} "
     echo "+-----------------------------------------------------------------------------+"      
     echo -e "|${GREEN}Server Country    |${NC} $SERVER_COUNTRY"

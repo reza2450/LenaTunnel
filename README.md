@@ -1,3 +1,11 @@
+<div align="center"><img src="https://raw.githubusercontent.com/MrAminiDev/NebulaTunnel/main/NebulaTunnel.JPG" width="500"></div>
+<div align="center"><br>
+
+  برای توضیحات <a href="https://github.com/MrAminiDev/LenaTunnel/blob/main/README-fa.md"> فارسی اینجا بزنید </a>
+
+</div>
+<br><br>
+
 # What is Lena Tunnel?
 
 Lena is a fast, lightweight and intelligent tunnel that provides a stable and secure network communication experience by relying on powerful VxLAN technology and automatic traffic management through Haproki. This system is designed to automatically manage communication tunnels and direct traffic with minimal latency and maximum efficiency without the need for complex settings. Lena is an ideal choice for those looking for a professional, low-power and reliable solution in network infrastructure.

@@ -30,9 +30,9 @@ Lena_menu() {
     echo "|| |     ___ _ __   __ _ 										|"
     echo "|| |    / _ \ '_ \ / _  |										|"
     echo "|| |___|  __/ | | | (_| |										|"
-    echo "|\_____/\___|_| |_|\__,_|	V1.0.1 Beta				            |" 
+    echo "|\_____/\___|_| |_|\__,_|	V1.0.2 Beta				            |" 
     echo "+-----------------------------------------------------------------------------+"    
-    echo -e "| Telegram Channel : ${MAGENTA}@AminiDev ${NC}| Version : ${GREEN} 1.0.1 Beta ${NC} "
+    echo -e "| Telegram Channel : ${MAGENTA}@AminiDev ${NC}| Version : ${GREEN} 1.0.2 Beta ${NC} "
     echo "+-----------------------------------------------------------------------------+"      
     echo -e "|${GREEN}Server Country    |${NC} $SERVER_COUNTRY"
     echo -e "|${GREEN}Server IP         |${NC} $SERVER_IP"
@@ -183,7 +183,7 @@ if [[ "$role_choice" == "1" ]]; then
         echo "IRAN Server setup complete."
         echo -e "####################################"
         echo -e "# Your IPv4 :                      #"
-        echo -e "#  $ipv4_local                     #"
+        echo -e "#  30.0.0.1                     #"
         echo -e "####################################"
     fi
 
@@ -208,7 +208,7 @@ elif [[ "$role_choice" == "2" ]]; then
     echo "Kharej Server setup complete."
     echo -e "####################################"
     echo -e "# Your IPv4 :                      #"
-    echo -e "#  $ipv4_local                     #"
+    echo -e "#  30.0.0.2                        #"
     echo -e "####################################"
 
     VXLAN_IP="30.0.0.2/24"

@@ -1,4 +1,4 @@
-<div align="center"><img src="https://raw.githubusercontent.com/MrAminiDev/NebulaTunnel/main/NebulaTunnel.JPG" width="500"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/MrAminiDev/LenaTunnel/main/lena.PNG" width="500"></div>
 <div align="center"><br>
 
   برای توضیحات <a href="https://github.com/MrAminiDev/LenaTunnel/blob/main/README-fa.md"> فارسی اینجا بزنید </a>

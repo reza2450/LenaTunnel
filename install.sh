@@ -43,6 +43,7 @@ Lena_menu() {
     echo -e "1- Install new tunnel"
     echo -e "2- Uninstall tunnel(s)"
     echo -e "3- Install BBR"
+    echo -e "4- Apply network optimizations"
     echo "+-----------------------------------------------------------------------------+"
     echo -e "\033[0m"
 }
@@ -60,10 +61,24 @@ uninstall_all_vxlan() {
 }
 
 install_bbr() {
-    echo "Running BBR script..."
-    curl -fsSL https://raw.githubusercontent.com/MrAminiDev/NetOptix/main/scripts/bbr.sh -o /tmp/bbr.sh
-    bash /tmp/bbr.sh
-    rm /tmp/bbr.sh
+    echo "[*] Enabling BBR and fast queue..."
+    modprobe tcp_bbr 2>/dev/null
+    cat <<EOF >/etc/sysctl.d/99-lena-bbr.conf
+net.core.default_qdisc=fq
+net.ipv4.tcp_congestion_control=bbr
+EOF
+    sysctl -p /etc/sysctl.d/99-lena-bbr.conf >/dev/null
+    echo "[+] BBR has been enabled."
+}
+
+apply_net_optimizations() {
+    echo "[*] Applying additional network optimizations..."
+    cat <<EOF >/etc/sysctl.d/99-lena-opt.conf
+net.ipv4.tcp_fastopen=3
+net.ipv4.tcp_mtu_probing=1
+EOF
+    sysctl -p /etc/sysctl.d/99-lena-opt.conf >/dev/null
+    echo "[+] Network optimizations applied."
 }
 
 install_haproxy_and_configure() {
@@ -124,7 +139,7 @@ EOL
 # ---------------- MAIN ----------------
 while true; do
     Lena_menu
-    read -p "Enter your choice [1-3]: " main_action
+    read -p "Enter your choice [1-4]: " main_action
     case $main_action in
         1)
             break
@@ -135,6 +150,10 @@ while true; do
             ;;
         3)
             install_bbr
+            read -p "Press Enter to return to menu..."
+            ;;
+        4)
+            apply_net_optimizations
             read -p "Press Enter to return to menu..."
             ;;
         *)

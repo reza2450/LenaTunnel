@@ -16,6 +16,7 @@ Lena is a fast, lightweight and intelligent tunnel that provides a stable and se
 🌐 Local IPv4 Support: In situations where IPv6 is restricted or blocked, Lena maintains your connection without interruption using local IPv4.<br>
 ⚙️ Easy installation and setup with HAProxy: Tunnels are automatically and intelligently created and managed with the help of the powerful HAProxy tool.<br>
 💡 Very low resource consumption: Lena is designed for optimal performance and consumes minimal hardware resources while providing high speed and stability.<br>
+🛠️ Built-in network optimizations: The installer can enable BBR and additional sysctl tweaks to reduce latency for gaming and streaming.<br>
 
 # Install script
 ```
